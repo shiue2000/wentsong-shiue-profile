@@ -21,11 +21,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
   const handleCopyPitch = () => {
     const pitchText = `WenTsong Shiue, PhD | Senior AI & ML Researcher | Former VP @ Bank of America
-• 20+ years of enterprise data modeling & data science leadership (Bank of America VP, Uniqlinc, Alvaview, FreeScale Semiconductor).
-• Co-inventor of U.S. Patent 11,531,734 ("Determining Optimal Machine Learning Models").
-• Deep expertise in financial fraud analytics (8 banking channels), Explainable AI (SHAP/LIME), Model Risk Governance (MRM), and XGBoost/LightGBM.
-• Ph.D. in EE & CS from Arizona State University (dissertation incorporated into PSU SimplePower tool).
-Portfolio: https://shiue2000.github.io | LinkedIn: https://www.linkedin.com/in/wentsong-shiue-69425852`;
+• 20+ years of enterprise data modeling, machine learning & semiconductor depth (Bank of America VP, Uniqlinc, Alvaview, FreeScale Semiconductor).
+• Co-inventor of U.S. Patent 11,531,734 ("Determining Optimal Machine Learning Models") and Freescale DPTV semiconductor patent record.
+• Deep expertise in financial fraud analytics (8 banking channels), Explainable AI (SHAP/LIME), Model Risk Governance (MRM), and IC EDA Low-Power AI Chip Automation.
+• Ph.D. in EE & CS from Arizona State University (cache memory data power modeling incorporated into PSU SimplePower tool).
+Portfolio: https://githubio-production-30a7.up.railway.app/en/ | LinkedIn: https://www.linkedin.com/in/wentsong-shiue-69425852`;
 
     navigator.clipboard.writeText(pitchText);
     setCopiedPitch(true);
@@ -33,13 +33,13 @@ Portfolio: https://shiue2000.github.io | LinkedIn: https://www.linkedin.com/in/w
   };
 
   const techBadges = [
-    { label: 'XGBoost', color: 'border-cyan-500/40 text-cyan-300 bg-cyan-950/30' },
-    { label: 'LightGBM', color: 'border-sky-500/40 text-sky-300 bg-sky-950/30' },
-    { label: 'SHAP & LIME', color: 'border-emerald-500/40 text-emerald-300 bg-emerald-950/30' },
-    { label: 'Optuna', color: 'border-blue-500/40 text-blue-300 bg-blue-950/30' },
+    { label: 'XGBoost & LightGBM', color: 'border-cyan-500/40 text-cyan-300 bg-cyan-950/30' },
+    { label: 'SHAP & LIME (XAI)', color: 'border-emerald-500/40 text-emerald-300 bg-emerald-950/30' },
     { label: 'US Patent 11,531,734', color: 'border-amber-500/40 text-amber-300 bg-amber-950/30' },
+    { label: 'IC EDA & AI Chip', color: 'border-violet-500/40 text-violet-300 bg-violet-950/30' },
+    { label: 'Agentic EDA & RTL', color: 'border-fuchsia-500/40 text-fuchsia-300 bg-fuchsia-950/30' },
     { label: 'AI Governance & MRM', color: 'border-purple-500/40 text-purple-300 bg-purple-950/30' },
-    { label: 'Gemini 3.8 Flash', color: 'border-pink-500/40 text-pink-300 bg-pink-950/30' },
+    { label: 'Low-Power Memory Modeling', color: 'border-blue-500/40 text-blue-300 bg-blue-950/30' },
   ];
 
   return (
@@ -72,6 +72,8 @@ Portfolio: https://shiue2000.github.io | LinkedIn: https://www.linkedin.com/in/w
               <span>{isEn ? 'AI & Machine Learning Researcher' : '人工智慧與機器學習研究員'}</span>
               <span aria-hidden="true" className="text-slate-600">·</span>
               <span>{isEn ? 'Former VP @ Bank of America' : '前美國銀行副總裁'}</span>
+              <span aria-hidden="true" className="text-slate-600">·</span>
+              <span>{isEn ? 'IC EDA Low-Power Design' : 'IC EDA 低功耗晶片設計'}</span>
               <span aria-hidden="true" className="text-slate-600">·</span>
               <span>{isEn ? 'U.S. Patent 11,531,734' : '獲准美國專利'}</span>
             </div>

@@ -93,15 +93,17 @@ export const PROFILE_DATA = {
   nameZh: '薛文聰 博士',
   title: 'AI & Machine Learning Researcher | Senior Data Scientist',
   titleZh: '人工智慧與機器學習研究員 | 資深資料科學家',
-  subtitle: 'Financial Fraud Analytics · Explainable AI (XAI) · Model Risk Governance · Patent Co-Inventor',
-  subtitleZh: '金融防偽分析 · 可解釋 AI (XAI) · 模型風險治理 · 美國專利發明人',
+  subtitle: 'Financial Fraud Analytics · Explainable AI (XAI) · Model Risk Governance · IC EDA Low Power Design · Patent Co-Inventor',
+  subtitleZh: '金融防偽分析 · 可解釋 AI (XAI) · 模型風險治理 · IC EDA 低功耗晶片設計 · 美國專利發明人',
   location: 'Austin, Texas, USA',
   locationZh: '美國德州奧斯汀',
   linkedinUrl: 'https://www.linkedin.com/in/wentsong-shiue-69425852',
   linkedinFeaturedMediaUrl: 'https://www.linkedin.com/in/wentsong-shiue-69425852/overlay/1790006860226/single-media-viewer/?profileId=ACoAAAsSRtABQG5pp-gxsP44d0iDSgmVvobOgqU',
   githubUrl: 'https://github.com/shiue2000',
   targetRepoUrl: 'https://github.com/shiue2000/shiue2000.github.io',
-  targetSiteUrl: 'https://shiue2000.github.io',
+  targetSiteUrl: 'https://githubio-production-30a7.up.railway.app/en/',
+  targetRailwayUrl: 'https://githubio-production-30a7.up.railway.app/en/',
+  targetGithubIoUrl: 'https://shiue2000.github.io',
   googleScholarUrl: 'https://scholar.google.com/scholar?hl=zh-TW&q=wen-tsong+shiue&lr=&oq=',
   
   featuredLinkedInMedia: {
@@ -441,6 +443,23 @@ export const PROFILE_DATA = {
         { name: 'AI Agent Security & Guardrails', focus: 'Safety, prompt injection mitigation' },
         { name: 'Human-in-the-Loop AI Review', focus: 'Reliability and governance of generative outputs' }
       ]
+    },
+    {
+      id: 'ic-eda',
+      name: 'IC EDA & Low-Power AI Chip Design Automation',
+      nameZh: 'IC EDA 與低功耗晶片設計自動化',
+      description: 'The strategic convergence of AI for EDA, LLMs for RTL generation, Agentic EDA workflows, memory hierarchy optimization, and low-power semiconductor architecture.',
+      descriptionZh: '結合 AI for EDA、大語言模型 RTL 程式碼生成、Agentic EDA 智慧體工作流、記憶體階層架構優化與低功耗半導體架構之核心前沿。',
+      skills: [
+        { name: 'AI for EDA & Physical Design', focus: 'AI-driven floorplanning, placement, routing, and timing closure' },
+        { name: 'LLMs for RTL Generation', focus: 'Automated Verilog/VHDL generation & hardware synthesis' },
+        { name: 'AI-Based Verification & Bug Triage', focus: 'Automated testbench generation, coverage maximization, formal checking' },
+        { name: 'Agentic EDA & Autonomous Tape-Out', focus: 'Multi-agent orchestration from architecture spec to physical tape-out' },
+        { name: 'Memory Hierarchy & Data Movement', focus: 'Cache optimization, memory bandwidth, energy-aware scheduling' },
+        { name: 'AI Accelerators (GPU / NPU / TPU)', focus: 'Compute vs memory bandwidth trade-offs, systolic arrays, tensor cores' },
+        { name: 'Chiplet & 3D IC Architectures', focus: 'HBM / memory systems, heterogeneous packaging, 3D integration' },
+        { name: 'Low-Power AI Computing & Modeling', focus: 'Cycle-accurate power simulation (PSU SimplePower) & DPTV (Freescale)' }
+      ]
     }
   ],
 
@@ -651,10 +670,52 @@ export const PROFILE_DATA = {
       technologies: ['RAG', 'Vector Embeddings', 'Hybrid Retrieval', 'Citation Verification', 'Prompt Optimization'],
       status: 'Applied Prototype & Research',
       statusZh: '應用原型與前沿研究'
+    },
+    {
+      id: 'ai-chip-eda',
+      title: 'AI Chip EDA & Low Power Design Automation: From Traditional Chip Design to AI-Native, Agentic EDA',
+      titleZh: 'AI 晶片 EDA 與低功耗設計自動化：從傳統晶片設計邁向 AI 原生、Agentic EDA',
+      category: 'research' as const,
+      categoryLabel: 'Semiconductor & AI Research',
+      categoryLabelZh: '半導體與 AI 戰略前沿',
+      overview: 'Strategic architectural roadmap for 2026–2035 on the convergence of AI for EDA, LLMs for RTL generation, AI-based verification, AI-driven physical design, Agentic EDA, AI accelerators (GPU/NPU/TPU), Chiplet & 3D IC architectures, HBM memory systems, and low-power AI computing.',
+      overviewZh: '針對 2026–2035 年半導體演進之戰略架構藍圖：深度融合 AI for EDA、LLMs RTL 代碼生成、AI 驗證、AI 驅動實體設計、Agentic EDA 智慧體、AI 加速器（GPU/NPU/TPU）、Chiplet 與 3D IC 架構、HBM 記憶體系統及低功耗 AI 計算。',
+      keyContributions: [
+        'Formulated the 2026–2035 technology evolution stack: AI Model ➔ AI Accelerator ➔ Chiplet Architecture ➔ HBM / Memory System ➔ 3D Integration ➔ AI-Driven EDA Agents ➔ Autonomous Chip Design.',
+        'Identified the critical Memory & Data Movement bottleneck: Performance for AI accelerators is governed by memory hierarchy, cache optimization, data movement, bandwidth, and energy-aware scheduling.',
+        'Architected the convergence nexus: AI/ML + Knowledge Graphs + LLMs + AI Agents + EDA + Low-Power Chip Design.',
+        'Bridged ASU Ph.D. cache power modeling (Penn State SimplePower) and Freescale i.MX chipset data modeling with 20+ years enterprise AI to pioneer AI-Native Chip Design.'
+      ],
+      keyContributionsZh: [
+        '確立 2026–2035 晶片技術演進路徑：AI 模型 ➔ AI 加速器 ➔ Chiplet 架構 ➔ HBM / 記憶體系統 ➔ 3D 整合 ➔ AI 驅動 EDA 智慧體 ➔ 自主晶片設計。',
+        '剖析關鍵記憶體與資料搬移瓶頸：AI 加速器效能不僅取決於算力，快取階層優化、資料流動、記憶體頻寬與節能感知調度更為關鍵。',
+        '提出核心融合交集：AI/ML + 知識圖譜 + LLMs + AI 智慧體 + EDA + 低功耗晶片設計。',
+        '串聯 ASU 博士班快取功耗建模（賓州州立 SimplePower 採納）與飛思卡爾晶片組數據建模之底蘊，跨接 20+ 年企業 AI 經驗開拓 AI 原生晶片設計。'
+      ],
+      metricsOrOutcomes: [
+        'Comprehensive blueprint for Agentic EDA orchestrating RTL generation, verification, placement, and routing',
+        'Energy-aware memory hierarchy and cache modeling addressing modern accelerator power walls',
+        'From simple EDA automation to true AI-native, multi-agent chip synthesis'
+      ],
+      metricsOrOutcomesZh: [
+        '提供 Agentic EDA 編排 RTL 生成、驗證、佈局到繞線的完整前瞻藍圖',
+        '以節能感知記憶體階層與快取建模突破現代加速器功耗牆',
+        '從傳統 EDA 工具自動化跨越至真正的 AI 原生多智慧體晶片合成'
+      ],
+      technologies: ['AI for EDA', 'LLMs for RTL', 'Agentic EDA', 'Low-Power Design', 'HBM / 3D IC', 'Cache Modeling', 'SimplePower', 'Chiplets'],
+      status: 'Strategic Research & Vision',
+      statusZh: '前沿戰略研究與願景'
     }
   ],
 
   faqs: [
+    {
+      question: "What is Dr. Shiue's expertise in IC EDA, Low-Power Design, and AI Chip Automation?",
+      questionZh: "薛博士在 IC EDA、低功耗晶片設計與 AI 晶片自動化方面有哪些專業背景與洞見？",
+      tag: "IC EDA & AI Chips",
+      answer: "Dr. Shiue holds a Ph.D. in Electrical & Computer Engineering from Arizona State University, where his dissertation on cache memory data power modeling was officially adopted by Penn State University's SimplePower cycle-accurate simulator. He previously served as Senior Data Modeling Engineer at FreeScale Semiconductor working on i.MX chipset bus bandwidth, video power, and dynamic process temperature compensation (DPTV). Today, he pioneers the convergence of AI/ML + Knowledge Graphs + LLMs + AI Agents + EDA + Low-Power Chip Design, envisioning AI-native chip design and agentic EDA automating RTL generation, verification, placement, and tape-out for next-generation accelerators, chiplets, and 3D ICs.",
+      answerZh: "薛博士擁有亞利桑那州立大學（ASU）電機與電腦工程博士學位，其博士論文快取記憶體功耗建模成果被賓州州立大學 SimplePower 週期精確工具正式採用；他曾任飛思卡爾半導體（FreeScale）資深資料建模工程師，深入 i.MX 晶片組頻寬與 DPTV 動態溫度補償專利技術。如今，他積極探索 AI/ML + 知識圖譜 + LLMs + AI 智慧體 + EDA + 低功耗晶片設計的戰略交集，提出從傳統 EDA 自動化邁向 AI 原生與 Agentic EDA 的 2026–2035 晶片架構演進藍圖。"
+    },
     {
       question: "What is Dr. Shiue's experience with XGBoost and LightGBM?",
       questionZh: "薛博士在 XGBoost 與 LightGBM 方面有哪些實務經驗？",

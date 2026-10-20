@@ -12,6 +12,7 @@ import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
 import { ExperienceTimeline } from './components/ExperienceTimeline';
 import { ExpertiseMatrix } from './components/ExpertiseMatrix';
+import { IcedaSection } from './components/IcedaSection';
 import { PatentsAndEducation } from './components/PatentsAndEducation';
 import { ProjectsPortfolio } from './components/ProjectsPortfolio';
 import { InteractiveAiLab } from './components/InteractiveAiLab';
@@ -69,6 +70,8 @@ export default function App() {
         <ExperienceTimeline language={language} />
 
         <ExpertiseMatrix language={language} />
+
+        <IcedaSection language={language} />
 
         <PatentsAndEducation language={language} />
 

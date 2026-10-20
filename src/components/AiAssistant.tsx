@@ -22,8 +22,8 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
     id: 'welcome',
     role: 'assistant',
     content: isEn
-      ? "Hello! I am Dr. WenTsong Shiue's AI profile assistant. You can ask me about his 20+ years of enterprise data modeling & machine learning leadership (including Vice President & Senior Data Scientist at Bank of America 2017–2026), U.S. Patent 11,531,734, Explainable AI (SHAP/LIME), ASU Ph.D., or technical stack. How can I assist you today?"
-      : '您好！我是薛文聰博士（WenTsong Shiue, PhD）的專屬 AI 助理。您可以詢問關於他 20+ 年跨領域企業資料建模與機器學習領導歷練（包括任職美國銀行副總裁暨資深資料科學家 2017–2026）、獲核准的美國專利 11,531,734、可解釋 AI（SHAP/LIME）、亞利桑那州立大學博士學位或技術專長。請問有什麼我可以為您說明的嗎？',
+      ? "Hello! I am Dr. WenTsong Shiue's AI profile assistant. You can ask me about his 20+ years of enterprise data modeling & machine learning leadership (including Vice President & Senior Data Scientist at Bank of America 2017–2026), U.S. Patent 11,531,734, IC EDA Low-Power AI Chip Design Automation, Explainable AI (SHAP/LIME), ASU Ph.D., or technical stack. How can I assist you today?"
+      : '您好！我是薛文聰博士（WenTsong Shiue, PhD）的專屬 AI 助理。您可以詢問關於他 20+ 年跨領域企業資料建模與機器學習領導歷練（包括任職美國銀行副總裁暨資深資料科學家 2017–2026）、獲核准的美國專利 11,531,734、IC EDA 低功耗晶片設計自動化、可解釋 AI（SHAP/LIME）、亞利桑那州立大學博士學位或技術專長。請問有什麼我可以為您說明的嗎？',
     timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
   };
 
@@ -36,16 +36,16 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
   const samplePrompts = isEn
     ? [
         "Tell me about Dr. Shiue's LinkedIn featured media & U.S. Patent 11,531,734.",
-        "What is Dr. Shiue's experience with XGBoost and LightGBM?",
-        "What experience does he have in financial fraud detection?",
-        "What is his educational background?",
-        "How does his experience relate to AI governance?",
+        "What is Dr. Shiue's expertise in IC EDA & Low-Power AI Chip Design?",
+        "What is Dr. Shiue's experience with XGBoost and LightGBM in banking fraud?",
+        "What is his perspective on AI-Native, Agentic EDA (2026–2035)?",
+        "What is his educational background and SimplePower (PSU) tool contribution?",
       ]
     : [
         '介紹薛博士在 LinkedIn 上的精選專利成果 (US 11,531,734)。',
+        '薛博士在 IC EDA、低功耗晶片設計與半導體建模上有何專業背景？',
         '薛博士在 XGBoost 與 LightGBM 方面有哪些實務經驗？',
-        '他在美國銀行的金融防偽經驗涵蓋哪些業務管道？',
-        '薛博士的博士學位與學術論文背景為何？',
+        '薛博士對於 2026–2035 年 AI 原生與 Agentic EDA 的前瞻願景？',
         '他在可解釋 AI（SHAP/LIME）與模型風險治理上的成就？',
       ];
 

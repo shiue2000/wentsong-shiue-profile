@@ -31,6 +31,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { href: '#about', label: language === 'en' ? 'About' : '關於' },
     { href: '#experience', label: language === 'en' ? 'Experience' : '經歷' },
     { href: '#expertise', label: language === 'en' ? 'Expertise' : '專業技能' },
+    { href: '#iceda', label: language === 'en' ? 'IC EDA & AI Chip' : 'IC EDA 與晶片' },
     { href: '#patents', label: language === 'en' ? 'Patents & Education' : '專利與學歷' },
     { href: '#projects', label: language === 'en' ? 'Projects' : '研究與專案' },
     { href: '#lab', label: language === 'en' ? 'AI Lab' : '互動實驗室' },

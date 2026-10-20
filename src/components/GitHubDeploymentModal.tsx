@@ -107,7 +107,7 @@ jobs:
                 {isEn ? 'GitHub Pages Deployment Guide' : 'GitHub Pages 部署指引'}
               </h3>
               <div className="text-xs font-mono text-cyan-400">
-                Target: https://github.com/shiue2000/shiue2000.github.io → https://shiue2000.github.io
+                Target: https://githubio-production-30a7.up.railway.app/en/ &amp; https://shiue2000.github.io
               </div>
             </div>
           </div>

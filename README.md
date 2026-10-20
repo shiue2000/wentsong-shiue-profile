@@ -6,9 +6,11 @@
 
 A modern, production-grade personal profile website for **WenTsong Shiue, PhD** (AI & Machine Learning Researcher, Senior Data Scientist, former Vice President at Bank of America).
 
-- **Live URL:** [https://shiue2000.github.io](https://shiue2000.github.io)
+- **Live Production URL:** [https://githubio-production-30a7.up.railway.app/en/](https://githubio-production-30a7.up.railway.app/en/)
+- **GitHub Pages URL:** [https://shiue2000.github.io](https://shiue2000.github.io)
 - **GitHub Repository:** [https://github.com/shiue2000/shiue2000.github.io](https://github.com/shiue2000/shiue2000.github.io)
 - **LinkedIn:** [https://www.linkedin.com/in/wentsong-shiue-69425852](https://www.linkedin.com/in/wentsong-shiue-69425852)
+- **LinkedIn Featured Media:** [U.S. Patent 11,531,734 Publication](https://www.linkedin.com/in/wentsong-shiue-69425852/overlay/1790006860226/single-media-viewer/?profileId=ACoAAAsSRtABQG5pp-gxsP44d0iDSgmVvobOgqU)
 
 ---
 
@@ -23,7 +25,13 @@ A modern, production-grade personal profile website for **WenTsong Shiue, PhD** 
    - Ph.D. in Electrical Engineering & Computer Science from Arizona State University (dissertation on cache memory power modeling incorporated into Penn State University's **SimplePower** tool).
    - Ranked 3rd out of 120,000 students in the Taiwan National College Entrance Examination.
 
-3. **Interactive Model Governance & SHAP Lab**
+3. **IC EDA & Low-Power AI Chip Design Automation (2026–2035 Horizon)**
+   - **From Traditional Chip Design to AI-Native, Agentic EDA:** Interactive technology evolution stack spanning AI Model ➔ AI Accelerator ➔ Chiplet Architecture ➔ HBM / Memory System ➔ 3D Integration ➔ AI-Driven EDA Agents ➔ Autonomous Chip Design.
+   - **Memory & Data Movement Bottleneck Insight:** Beyond compute FLOPs to memory hierarchy, cache optimization, bandwidth, and energy-aware scheduling.
+   - **6 Convergence Pillars:** AI for EDA, LLMs for RTL generation, AI-based verification, AI-driven physical design, Agentic EDA, and Low-Power AI Computing (GPU/NPU/TPU).
+   - **Dr. Shiue's Strategic Convergence:** AI/ML + Knowledge Graphs + LLMs + AI Agents + EDA + Low-Power Chip Design.
+
+4. **Interactive Model Governance & SHAP Lab**
    - Live interactive simulation allowing users and recruiters to adjust classification thresholds ($0.05 \le \tau \le 0.85$) and observe real-time tradeoffs between Precision, Recall, False Positive Rate (FPR), and F1 Score.
    - Interactive local **SHAP Feature Contribution Waterfall** decomposing individual feature attributions on sample Wire, Debit, and P2P transactions.
 

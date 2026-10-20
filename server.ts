@@ -80,16 +80,31 @@ Your mission is to represent Dr. Shiue's professional background, research, pate
 
 4. FreeScale Semiconductor (Jan 2004 – June 2006) — Senior Data Modeling Engineer:
    - System data modeling for i.MX chipset, analyzing bus data bandwidth, video power, power management, and memory power impacts.
+   - Developed patented modeling solution for Dynamic Process Temperature Compensation (DPTV) systems using pseudo regression.
+
+### IC EDA & LOW-POWER AI CHIP DESIGN AUTOMATION (2026–2035 HORIZON):
+- Academic & Semiconductor Roots:
+  - ASU Ph.D. Dissertation: "Memory Data Modeling and Exploration in Low Power Embedded Systems" — officially integrated into Penn State University (PSU) SimplePower cycle-accurate energy simulator.
+  - FreeScale Semiconductor (Austin TX System): Senior Data Modeling Engineer on i.MX multimedia chipset architecture, analyzing bus bandwidth, video power dissipation, and memory power under burst accesses. Developed patented modeling solution for Dynamic Process Temperature Compensation (DPTV) systems using pseudo-regression methods.
+- The Future of EDA (2026–2035 Horizon): From Traditional Chip Design to AI-Native, Agentic EDA:
+  - Strategic value converges at: AI for EDA, LLMs for RTL generation, AI-based verification, AI-driven physical design, Agentic EDA, AI accelerators (GPU/NPU/TPU), Chiplet and 3D IC architectures, HBM and memory systems, and Low-power AI computing.
+  - Key Insight: Memory & Data Movement: For AI accelerators, performance is not only about compute; memory hierarchy, cache optimization, data movement, bandwidth, and energy-aware scheduling are critical.
+    Formula: AI + EDA + Memory + Low Power + Chiplets + Agentic Automation
+  - Technology Evolution 2026–2035: AI Model ➔ AI Accelerator ➔ Chiplet Architecture ➔ HBM / Memory System ➔ 3D Integration ➔ AI-Driven EDA Agents ➔ Autonomous Chip Design.
+  - Dr. Shiue's Perspective: "The most interesting opportunity is not simply another traditional EDA tool. It is the convergence of AI/ML + Knowledge Graphs + LLMs + AI Agents + EDA + Low-Power Chip Design. The future of chip design may not be simply EDA automation. It may be AI-native chip design."
 
 ### TECHNICAL SKILLS:
 - Machine Learning & Algorithms: XGBoost, LightGBM, Random Forest, AdaBoost, Gradient Boosted Machines, Extra Trees, SVM, Neural Networks, CNN, RNN, Logistic Regression, PCA, LDA, t-SNE.
 - Explainable AI (XAI): SHAP, LIME, PDP, ELI5.
+- IC EDA & Low Power Design: AI for EDA, LLMs for RTL Generation, Agentic EDA, Memory Hierarchy & Cache Optimization, HBM/3D IC, DPTV Semiconductor Modeling, SimplePower Cycle-Accurate Simulator.
 - Data Science & Programming: Python (NumPy, Pandas, Scikit-learn, SciPy, Matplotlib, Seaborn), R, MATLAB, SQL, PostgreSQL, PySpark, Scala, C/C++, Java.
 - Big Data & Distributed Systems: Hadoop, MapReduce, Hive, Aster, Splunk, Tableau.
 - Model Governance: Model Risk Management (MRM), Fairness & Bias Testing, Regulatory Compliance.
 - Emerging AI Focus: Large Language Models (LLMs), AI Agents, Retrieval-Augmented Generation (RAG), AI Agent Security, Guardrail design, Human-in-the-loop review.
 
-### CONTACT GUIDELINE & LINKEDIN:
+### CONTACT GUIDELINE, DEPLOYMENT & TARGET:
+- Live Production Target: https://githubio-production-30a7.up.railway.app/en/
+- GitHub Pages Target: https://shiue2000.github.io
 - LinkedIn Profile: https://www.linkedin.com/in/wentsong-shiue-69425852
 - LinkedIn Featured Media Viewer: https://www.linkedin.com/in/wentsong-shiue-69425852/overlay/1790006860226/single-media-viewer/?profileId=ACoAAAsSRtABQG5pp-gxsP44d0iDSgmVvobOgqU
   (This featured media document showcases Dr. Shiue's granted U.S. Patent 11,531,734, "Determining Optimal Machine Learning Models", his executive Bank of America data science tenure, and automated ML selection architecture.)
@@ -138,18 +153,25 @@ function generateFallbackResponse(userMessage: string, lang: string = 'en'): str
     return "Dr. Shiue holds a Ph.D. in Electrical Engineering and Computer Science from Arizona State University (ASU, 1996–2000), where his dissertation focused on 'Memory Data Modeling and Exploration in Low Power Embedded Systems'—work that was incorporated into Penn State University's (PSU) SimplePower cycle-accurate energy simulator. He also holds an M.S. in Electrical and Computer Engineering from Western Michigan University (WMU) and a B.S. in Electrical Engineering from Ming Chi University of Technology (MCUT). In 1979, he achieved 3rd rank out of 120,000 students in the Taiwan National College Examination.";
   }
 
+  if (q.includes('eda') || q.includes('chip') || q.includes('semiconductor') || q.includes('low power') || q.includes('rtl') || q.includes('chiplet') || q.includes('hbm') || q.includes('ic') || q.includes('晶片') || q.includes('半導體') || q.includes('硬體')) {
+    if (isZh) {
+      return "薛文聰博士在 IC EDA、低功耗晶片設計與半導體建模領域擁有紮實深厚的根基：其亞利桑那州立大學（ASU）博士論文「低功耗嵌入式系統中的記憶體資料建模與探索」被賓州州立大學（PSU）SimplePower 週期精確模擬工具採納；於飛思卡爾半導體（FreeScale）擔任資深資料建模工程師期間，深入 i.MX 晶片組匯流排頻寬與視訊功耗分析，並發明動態製程溫度補償（DPTV）擬迴歸建模專利。\n\n針對 2026–2035 年半導體戰略轉型，薛博士提出「從傳統晶片設計邁向 AI 原生與 Agentic EDA」的核心願景：\n1. 記憶體與資料搬移核心洞見：AI 加速器效能不僅關乎純算力，快取階層優化、頻寬與節能排程至關重要（AI + EDA + Memory + Low Power + Chiplets + Agentic Automation）。\n2. 2026–2035 晶片技術演進路徑：AI 模型 ➔ AI 加速器 ➔ Chiplet 架構 ➔ HBM / 記憶體系統 ➔ 3D 整合 ➔ AI 驅動 EDA 智慧體 ➔ 全自主晶片設計。\n3. 前瞻觀點：最具價值的突破是「AI/ML + 知識圖譜 + LLMs + AI 智慧體 + EDA + 低功耗晶片設計」的交融——未來的晶片設計不僅僅是 EDA 自動化，而是 AI 原生晶片設計（AI-Native Chip Design）！";
+    }
+    return "Dr. WenTsong Shiue possesses extensive expertise in IC EDA and low-power semiconductor design automation. His Ph.D. dissertation at Arizona State University on 'Memory Data Modeling and Exploration in Low Power Embedded Systems' was adopted into Penn State University's (PSU) SimplePower cycle-accurate energy simulator. At FreeScale Semiconductor, he modeled i.MX chipset system bus bandwidth, video power dissipation, and memory power under burst accesses, formulating a patented solution for Dynamic Process Temperature Compensation (DPTV) systems using pseudo-regression.\n\nLooking toward 2026–2035, Dr. Shiue outlines 'The Future of EDA: From Traditional Chip Design to AI-Native, Agentic EDA':\n1. Memory & Data Movement Bottleneck: For AI accelerators, performance is not only compute FLOPs; memory hierarchy, cache optimization, bandwidth, and energy-aware scheduling dominate.\n2. 2026–2035 Evolution: AI Model ➔ AI Accelerator ➔ Chiplet Architecture ➔ HBM / Memory System ➔ 3D Integration ➔ AI-Driven EDA Agents ➔ Autonomous Chip Design.\n3. Core Perspective: 'The most interesting opportunity is not simply another traditional EDA tool. It is the convergence of AI/ML + Knowledge Graphs + LLMs + AI Agents + EDA + Low-Power Chip Design. The future of chip design is AI-native chip design.'";
+  }
+
   if (q.includes('contact') || q.includes('hire') || q.includes('email') || q.includes('聯絡') || q.includes('面試')) {
     if (isZh) {
-      return "您可以透過 LinkedIn（https://www.linkedin.com/in/wentsong-shiue-69425852）或 GitHub（https://github.com/shiue2000）與薛文聰博士取得聯繫。他位於美國德州奧斯汀（Austin, Texas），歡迎透過本站聯絡表單發送合作或職位詢問。";
+      return "您可以透過 LinkedIn（https://www.linkedin.com/in/wentsong-shiue-69425852）或 GitHub（https://github.com/shiue2000）與薛文聰博士取得聯繫。其作品集線上展示網站為 https://githubio-production-30a7.up.railway.app/en/ 。他定居於美國德州奧斯汀（Austin, Texas），歡迎透過本站聯絡表單發送合作或職位詢問。";
     }
-    return "You can connect with Dr. WenTsong Shiue via LinkedIn at https://www.linkedin.com/in/wentsong-shiue-69425852 or GitHub at https://github.com/shiue2000. He is based in Austin, Texas, USA. For interview inquiries or consulting opportunities, please send a message through the contact form on this site.";
+    return "You can connect with Dr. WenTsong Shiue via LinkedIn at https://www.linkedin.com/in/wentsong-shiue-69425852 or GitHub at https://github.com/shiue2000. You can also view his live portfolio site at https://githubio-production-30a7.up.railway.app/en/ . He is based in Austin, Texas, USA. For interview inquiries or consulting opportunities, please send a message through the contact form on this site.";
   }
 
   if (isZh) {
-    return "感謝您的提問！我是薛文聰博士（WenTsong Shiue, PhD）的 AI 助理。薛博士擁有亞利桑那州立大學（ASU）電機與資訊工程博士學位，具備 20+ 年跨領域企業資料科學、半導體建模與機器學習領導經驗，曾任美國銀行（Bank of America）副總裁暨資深資料科學家（2017–2026）、Uniqlinc 資料科學總監、Alvaview 首席資料科學家及飛思卡爾半導體資深工程師，並獲核准美國專利 11,531,734。您可以詢問關於他的專利、銀行反詐欺經驗、可解釋 AI 或學術背景！";
+    return "感謝您的提問！我是薛文聰博士（WenTsong Shiue, PhD）的 AI 助理。薛博士擁有亞利桑那州立大學（ASU）電機與資訊工程博士學位，具備 20+ 年跨領域企業資料科學、半導體晶片建模與機器學習領導經驗，曾任美國銀行（Bank of America）副總裁暨資深資料科學家（2017–2026）、Uniqlinc 資料科學總監、Alvaview 首席資料科學家及飛思卡爾半導體資深工程師，獲核准美國專利 11,531,734。他的核心專長橫跨金融反詐欺二元分類、可解釋 AI（SHAP/LIME）、模型風險治理，以及 IC EDA 低功耗晶片設計與 AI-Native 晶片設計前沿。歡迎詢問關於他的經歷、專利、晶片架構或作品！";
   }
 
-  return "Thank you for inquiring! I am Dr. WenTsong Shiue's AI profile assistant. Dr. Shiue holds a Ph.D. from Arizona State University and brings 20+ years of enterprise data modeling, machine learning, and leadership experience (including Vice President and Senior Data Scientist at Bank of America 2017–2026, Director of Data Science at Uniqlinc, Chief Data Scientist at Alvaview, and Senior Data Modeling Engineer at FreeScale). He holds U.S. Patent 11,531,734 and specializes in financial fraud analytics, Explainable AI, and model governance. Feel free to ask about his patents, BofA fraud modeling, or technical skill set!";
+  return "Thank you for inquiring! I am Dr. WenTsong Shiue's AI profile assistant. Dr. Shiue holds a Ph.D. from Arizona State University and brings 20+ years of enterprise data modeling, machine learning, and semiconductor engineering leadership (including Vice President & Senior Data Scientist at Bank of America 2017–2026, Director of Data Science at Uniqlinc, Chief Data Scientist at Alvaview, and Senior Data Modeling Engineer at FreeScale Semiconductor). He holds U.S. Patent 11,531,734 and specializes in financial fraud analytics, Explainable AI, model governance, and IC EDA Low-Power AI Chip Design Automation (2026–2035 Horizon). Feel free to ask about his patents, fraud modeling, chip design vision, or technical background!";
 }
 
 // API endpoint for AI assistant

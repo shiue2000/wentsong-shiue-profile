@@ -31,11 +31,18 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
             <p className="text-xs text-slate-400 max-w-md">
               {isEn
-                ? 'AI & Machine Learning Researcher · Senior Data Scientist · Financial Fraud Analytics & Model Governance Specialist · Austin, Texas'
-                : '人工智慧與機器學習研究員 · 資深資料科學家 · 金融防偽分析與模型治理專家 · 美國德州奧斯汀'}
+                ? 'AI & Machine Learning Researcher · Senior Data Scientist · Financial Fraud Analytics, IC EDA Low-Power Design & Model Governance Specialist · Austin, Texas'
+                : '人工智慧與機器學習研究員 · 資深資料科學家 · 金融防偽分析、IC EDA 低功耗晶片設計與模型治理專家 · 美國德州奧斯汀'}
             </p>
-            <div className="text-[11px] font-mono text-cyan-400/90 pt-1">
-              Target: <a href="https://shiue2000.github.io" className="hover:underline">https://shiue2000.github.io</a>
+            <div className="text-[11px] font-mono text-cyan-400/90 pt-1 flex flex-wrap items-center gap-2">
+              <span>Target:</span>
+              <a href="https://githubio-production-30a7.up.railway.app/en/" target="_blank" rel="noopener noreferrer" className="hover:underline text-cyan-300 font-semibold">
+                https://githubio-production-30a7.up.railway.app/en/
+              </a>
+              <span className="text-slate-600">·</span>
+              <a href="https://shiue2000.github.io" target="_blank" rel="noopener noreferrer" className="hover:underline text-slate-400">
+                shiue2000.github.io
+              </a>
             </div>
           </div>
 
