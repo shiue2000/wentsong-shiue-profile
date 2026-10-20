@@ -22,8 +22,8 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
     id: 'welcome',
     role: 'assistant',
     content: isEn
-      ? "Hello! I am Dr. WenTsong Shiue's AI profile assistant. You can ask me about his 8+ years as Vice President & Senior Data Scientist at Bank of America, U.S. Patent 11,531,734, Explainable AI (SHAP/LIME), ASU Ph.D., or technical stack. How can I assist you today?"
-      : '您好！我是薛文聰博士（WenTsong Shiue, PhD）的專屬 AI 助理。您可以詢問關於他在美國銀行擔任副總裁暨資深資料科學家的 8 年金融防偽實績、獲核准的美國專利 11,531,734、可解釋 AI（SHAP/LIME）、亞利桑那州立大學博士學位或技術專長。請問有什麼我可以為您說明的嗎？',
+      ? "Hello! I am Dr. WenTsong Shiue's AI profile assistant. You can ask me about his 20+ years of enterprise data modeling & machine learning leadership (including Vice President & Senior Data Scientist at Bank of America 2017–2026), U.S. Patent 11,531,734, Explainable AI (SHAP/LIME), ASU Ph.D., or technical stack. How can I assist you today?"
+      : '您好！我是薛文聰博士（WenTsong Shiue, PhD）的專屬 AI 助理。您可以詢問關於他 20+ 年跨領域企業資料建模與機器學習領導歷練（包括任職美國銀行副總裁暨資深資料科學家 2017–2026）、獲核准的美國專利 11,531,734、可解釋 AI（SHAP/LIME）、亞利桑那州立大學博士學位或技術專長。請問有什麼我可以為您說明的嗎？',
     timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
   };
 

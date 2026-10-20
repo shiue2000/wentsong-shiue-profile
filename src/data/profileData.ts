@@ -286,7 +286,7 @@ export const PROFILE_DATA = {
       inventors: ['Wentsong Shiue', 'Tony Yu Fu', 'Xianhong Zhang'],
       description: 'An automated machine learning system and methodology for dynamically identifying, tuning, and selecting optimal machine learning models across complex feature spaces, multi-dimensional hyperparameters, and business objective functions.',
       descriptionZh: '一種自動化機器學習系統與架構方法，用於在複雜高維特徵空間與多元超參數組合中，針對業務目標動態評估、調校並選定最佳預測模型。',
-      officialUrl: 'https://patents.google.com/patent/US11531734B1/en',
+      officialUrl: 'https://patents.google.com/patent/US11531734B2/en',
       tags: ['AutoML', 'Hyperparameter Tuning', 'Model Selection', 'Ensemble Optimization', 'USPTO Granted']
     },
     {
@@ -584,7 +584,7 @@ export const PROFILE_DATA = {
       technologies: ['AutoML', 'Bayesian Tuning', 'Ensemble Optimization', 'Model Selection', 'USPTO'],
       status: 'USPTO Granted (Dec 2022)',
       statusZh: 'USPTO 核准授權 (2022 年 12 月)',
-      externalLink: 'https://patents.google.com/patent/US11531734B1/en'
+      externalLink: 'https://patents.google.com/patent/US11531734B2/en'
     },
     {
       id: 'ai-agent-security',

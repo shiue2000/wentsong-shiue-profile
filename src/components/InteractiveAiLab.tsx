@@ -349,6 +349,94 @@ export const InteractiveAiLab: React.FC<InteractiveAiLabProps> = ({ language }) 
 
               </div>
 
+              {/* Live Interactive ROC & PR Curve Visual Plot */}
+              <div className="mt-6 rounded-xl border border-slate-800 bg-slate-900/80 p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <Activity className="h-4 w-4 text-cyan-400" />
+                    <span className="text-xs font-mono font-bold text-white uppercase tracking-wider">
+                      {isEn ? 'Live ROC Curve & Cutoff Point' : '動態 ROC 曲線與操作點'}
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-mono text-cyan-300">
+                    AUC = 0.984 · PR-AUC = 0.942
+                  </span>
+                </div>
+
+                {/* SVG ROC Curve with Real-Time Dynamic Operating Point */}
+                <div className="relative aspect-[2/1] w-full bg-[#050b18] rounded-lg p-2 border border-slate-800/80 flex items-center justify-center">
+                  <svg className="w-full h-full" viewBox="0 0 280 140" fill="none">
+                    {/* Grid */}
+                    <line x1="30" y1="15" x2="265" y2="15" stroke="rgba(255,255,255,0.05)" strokeDasharray="2 2" />
+                    <line x1="30" y1="45" x2="265" y2="45" stroke="rgba(255,255,255,0.05)" strokeDasharray="2 2" />
+                    <line x1="30" y1="75" x2="265" y2="75" stroke="rgba(255,255,255,0.05)" strokeDasharray="2 2" />
+                    <line x1="30" y1="105" x2="265" y2="105" stroke="rgba(255,255,255,0.05)" strokeDasharray="2 2" />
+                    <line x1="30" y1="120" x2="265" y2="120" stroke="rgba(56,189,248,0.4)" strokeWidth="1.5" />
+                    <line x1="30" y1="15" x2="30" y2="120" stroke="rgba(56,189,248,0.4)" strokeWidth="1.5" />
+
+                    {/* Random Guess Diagonal */}
+                    <line x1="30" y1="120" x2="265" y2="15" stroke="rgba(148,163,184,0.2)" strokeDasharray="4 4" strokeWidth="1" />
+
+                    {/* High-Performance Fraud ROC Curve */}
+                    <path
+                      d="M 30,120 Q 32,22 65,20 T 150,18 T 265,15"
+                      stroke="url(#rocGradient)"
+                      strokeWidth="2.5"
+                      fill="none"
+                    />
+
+                    {/* Shaded Area Under Curve */}
+                    <path
+                      d="M 30,120 Q 32,22 65,20 T 150,18 T 265,15 L 265,120 Z"
+                      fill="url(#rocArea)"
+                      opacity="0.18"
+                    />
+
+                    {/* Defs for gradients */}
+                    <defs>
+                      <linearGradient id="rocGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#22d3ee" />
+                        <stop offset="50%" stopColor="#38bdf8" />
+                        <stop offset="100%" stopColor="#818cf8" />
+                      </linearGradient>
+                      <linearGradient id="rocArea" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stopColor="#06b6d4" />
+                        <stop offset="100%" stopColor="#0284c7" />
+                      </linearGradient>
+                    </defs>
+
+                    {/* Dynamic Operating Dot based on current threshold */}
+                    {(() => {
+                      // Map simulatedFPR (0.08 to ~1.85%) to plot x (30 to ~100)
+                      // Map simulatedRecall (50% to 99.2%) to plot y (120 to 18)
+                      const fprNum = parseFloat(simulatedFPR);
+                      const recallNum = parseFloat(simulatedRecall);
+                      const dotX = 30 + Math.min(230, (fprNum / 2.0) * 80 + (1 - threshold) * 40);
+                      const dotY = 120 - ((recallNum - 40) / 60) * 100;
+
+                      return (
+                        <g>
+                          {/* Pulsing ring */}
+                          <circle cx={dotX} cy={dotY} r="8" fill="rgba(6,182,212,0.3)" className="animate-ping" />
+                          <circle cx={dotX} cy={dotY} r="5" fill="#22d3ee" stroke="#ffffff" strokeWidth="1.5" />
+                          <text x={dotX + 8} y={dotY - 4} fill="#38bdf8" fontSize="9" fontFamily="monospace" fontWeight="bold">
+                            τ = {threshold.toFixed(2)} (TPR: {simulatedRecall}%)
+                          </text>
+                        </g>
+                      );
+                    })()}
+
+                    {/* Axis Labels */}
+                    <text x="35" y="25" fill="#94a3b8" fontSize="8" fontFamily="monospace">TPR (Recall)</text>
+                    <text x="210" y="115" fill="#94a3b8" fontSize="8" fontFamily="monospace">FPR (Fallout)</text>
+                  </svg>
+                </div>
+                <div className="mt-2 flex items-center justify-between text-[10px] font-mono text-slate-400">
+                  <span>Operating Cutoff τ = {threshold.toFixed(2)}</span>
+                  <span className="text-emerald-400">Disparate Impact Ratio = 0.94 (Protected compliant)</span>
+                </div>
+              </div>
+
               {/* Model Risk Governance Explanation Box */}
               <div className="mt-6 rounded-xl border border-slate-800 bg-slate-950/40 p-4 text-xs leading-relaxed text-slate-400 space-y-2">
                 <div className="font-semibold text-slate-200">

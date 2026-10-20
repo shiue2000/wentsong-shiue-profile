@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, Bot, Award, FileCode2, ExternalLink, Sparkles, Copy, Check, Terminal, Cpu } from 'lucide-react';
 import { PROFILE_DATA } from '../data/profileData';
 import { Language } from '../types';
+import { TopologyVisualizer } from './TopologyVisualizer';
 
 interface HeroSectionProps {
   language: Language;
@@ -16,6 +17,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   const isEn = language === 'en';
   const [copiedPitch, setCopiedPitch] = useState(false);
+  const [imgFailed, setImgFailed] = useState(false);
 
   const handleCopyPitch = () => {
     const pitchText = `WenTsong Shiue, PhD | Senior AI & ML Researcher | Former VP @ Bank of America
@@ -165,63 +167,7 @@ Portfolio: https://shiue2000.github.io | LinkedIn: https://www.linkedin.com/in/w
           {/* Right Column: Visual Showcase & Verified Patent Highlight */}
           <div className="lg:col-span-5">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              
-              {/* Main Bento Card with Neural Graph Asset */}
-              <div className="glass-panel overflow-hidden rounded-2xl border border-cyan-500/20 p-1 shadow-2xl transition-all duration-300 hover:border-cyan-400/50 hover:shadow-cyan-950/40">
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl bg-slate-900">
-                  <img
-                    src="/src/assets/images/ai_neural_graph_1792465141807.jpg"
-                    alt="Dr. WenTsong Shiue AI Neural Network and Machine Learning Topology"
-                    referrerPolicy="no-referrer"
-                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#080d1a] via-transparent to-transparent" />
-                  
-                  {/* Clean unboxed overlay caption */}
-                  <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs text-slate-300">
-                    <span className="font-mono text-cyan-300">Multi-Layer Network Architecture</span>
-                    <span className="text-slate-400">ASU Ph.D. & Industry R&D</span>
-                  </div>
-                </div>
-
-                {/* Sub-panel: Granted Patent Spotlight */}
-                <div className="p-4 sm:p-5">
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="flex items-center gap-2">
-                      <Award className="h-5 w-5 text-amber-400 shrink-0" />
-                      <div>
-                        <div className="text-xs font-semibold uppercase tracking-wider text-amber-400/90 font-mono">
-                          {isEn ? 'U.S. Patent 11,531,734 Granted' : '獲准美國專利 11,531,734'}
-                        </div>
-                        <h4 className="mt-0.5 text-sm font-bold text-white dark:text-white light:text-slate-900">
-                          {isEn ? 'Determining Optimal Machine Learning Models' : '決定最佳機器學習模型'}
-                        </h4>
-                      </div>
-                    </div>
-                    <a
-                      href="https://patents.google.com/patent/US11531734B1/en"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="shrink-0 rounded-md p-1.5 text-slate-400 hover:bg-slate-800 hover:text-cyan-400 transition-colors"
-                      title="View Official Patent Record"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </div>
-
-                  <p className="mt-2 text-xs leading-relaxed text-slate-400">
-                    {isEn
-                      ? 'Automated algorithmic framework for dynamic multi-objective hyperparameter optimization and classifier candidate selection.'
-                      : '針對多目標超參數優化與候選模型評估篩選的自動化機器學習架構。'}
-                  </p>
-
-                  <div className="mt-3 flex items-center justify-between border-t border-slate-800/80 pt-2.5 text-[11px] font-mono text-slate-400">
-                    <span>USPTO · Dec 20, 2022</span>
-                    <span className="text-cyan-400">Bank of America</span>
-                  </div>
-                </div>
-              </div>
-
+              <TopologyVisualizer language={language} />
             </div>
           </div>
         </div>

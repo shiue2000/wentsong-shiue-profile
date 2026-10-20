@@ -146,10 +146,10 @@ function generateFallbackResponse(userMessage: string, lang: string = 'en'): str
   }
 
   if (isZh) {
-    return "感謝您的提問！我是薛文聰博士（WenTsong Shiue, PhD）的 AI 助理。薛博士擁有亞利桑那州立大學博士學位，具備 20+ 年跨領域資料科學、半導體建模與機器學習深厚經驗，曾任美國銀行（Bank of America）副總裁暨資深資料科學家（8+ 年）、Uniqlinc 資料科學總監、Alvaview 首席資料科學家及飛思卡爾半導體資深工程師，並擁有美國專利 11,531,734。您可以詢問關於他的專利、銀行反詐欺經驗、AI 技術棧或學術背景！";
+    return "感謝您的提問！我是薛文聰博士（WenTsong Shiue, PhD）的 AI 助理。薛博士擁有亞利桑那州立大學（ASU）電機與資訊工程博士學位，具備 20+ 年跨領域企業資料科學、半導體建模與機器學習領導經驗，曾任美國銀行（Bank of America）副總裁暨資深資料科學家（2017–2026）、Uniqlinc 資料科學總監、Alvaview 首席資料科學家及飛思卡爾半導體資深工程師，並獲核准美國專利 11,531,734。您可以詢問關於他的專利、銀行反詐欺經驗、可解釋 AI 或學術背景！";
   }
 
-  return "Thank you for inquiring! I am Dr. WenTsong Shiue's AI profile assistant. Dr. Shiue holds a Ph.D. from Arizona State University and brings over 20 years of enterprise data science, machine learning, and semiconductor modeling experience (including 8+ years as Vice President and Senior Data Scientist at Bank of America, Director of Data Science at Uniqlinc, Chief Data Scientist at Alvaview, and Senior Data Modeling Engineer at FreeScale). He holds U.S. Patent 11,531,734 and specializes in financial fraud analytics and Explainable AI. Feel free to ask about his patents, BofA fraud modeling, model governance, or technical skill set!";
+  return "Thank you for inquiring! I am Dr. WenTsong Shiue's AI profile assistant. Dr. Shiue holds a Ph.D. from Arizona State University and brings 20+ years of enterprise data modeling, machine learning, and leadership experience (including Vice President and Senior Data Scientist at Bank of America 2017–2026, Director of Data Science at Uniqlinc, Chief Data Scientist at Alvaview, and Senior Data Modeling Engineer at FreeScale). He holds U.S. Patent 11,531,734 and specializes in financial fraud analytics, Explainable AI, and model governance. Feel free to ask about his patents, BofA fraud modeling, or technical skill set!";
 }
 
 // API endpoint for AI assistant

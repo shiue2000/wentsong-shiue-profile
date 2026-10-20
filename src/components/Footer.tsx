@@ -62,7 +62,7 @@ export const Footer: React.FC<FooterProps> = ({
             </a>
 
             <a
-              href="https://patents.google.com/patent/US11531734B1/en"
+              href="https://patents.google.com/patent/US11531734B2/en"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-slate-300 hover:text-amber-400 transition-colors"

@@ -1,7 +1,7 @@
 # WenTsong Shiue, PhD — AI-Powered Personal Portfolio Website
 
 [![GitHub Pages Deployment](https://img.shields.io/badge/Deploy-GitHub_Pages-22c55e?logo=github)](https://shiue2000.github.io)
-[![USPTO Patent 11,531,734](https://img.shields.io/badge/Patent-US_11%2C531%2C734-amber-500)](https://patents.google.com/patent/US11531734B1/en)
+[![USPTO Patent 11,531,734](https://img.shields.io/badge/Patent-US_11%2C531%2C734-amber-500)](https://patents.google.com/patent/US11531734B2/en)
 [![Gemini 3.8 Flash](https://img.shields.io/badge/AI_Engine-Gemini_3.8_Flash-06b6d4)](https://ai.google.dev)
 
 A modern, production-grade personal profile website for **WenTsong Shiue, PhD** (AI & Machine Learning Researcher, Senior Data Scientist, former Vice President at Bank of America).
@@ -15,7 +15,7 @@ A modern, production-grade personal profile website for **WenTsong Shiue, PhD** 
 ## 🌟 Key Features
 
 1. **20+ Years Enterprise Career Timeline & Track Record**
-   - Detailed history spanning 20+ years of data modeling and machine learning leadership, including 8+ years as Vice President and Senior Data Scientist at **Bank of America** (2017–2026) governing machine learning models across 8 transaction channels: CAML, Debit, P2P (Zelle), Wire, ACH, Bill Pay, Credit, and Device.
+   - Detailed history spanning 20+ years of enterprise data modeling and machine learning leadership, including tenure as Vice President and Senior Data Scientist at **Bank of America** (2017–2026) governing machine learning models across 8 transaction channels: CAML, Debit, P2P (Zelle), Wire, ACH, Bill Pay, Credit, and Device.
    - Director of Data Science at Uniqlinc, Chief Data Scientist at Alvaview, and Senior Data Modeling Engineer at FreeScale Semiconductor.
 
 2. **Intellectual Property & Academic Rigor**

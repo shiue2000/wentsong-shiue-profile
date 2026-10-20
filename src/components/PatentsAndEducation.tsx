@@ -90,6 +90,24 @@ export const PatentsAndEducation: React.FC<PatentsAndEducationProps> = ({ langua
                     </span>
                   ))}
                 </div>
+
+                {/* Direct Google Patents Link Banner */}
+                {patent.officialUrl && (
+                  <div className="mt-4 pt-3 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2">
+                    <span className="text-[11px] font-mono text-slate-400">
+                      {isEn ? 'USPTO Official Gazette & Claims' : 'USPTO 專利公告與完整權利項'}
+                    </span>
+                    <a
+                      href={patent.officialUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-lg border border-amber-500/50 bg-amber-950/40 px-3 py-1.5 text-xs font-mono font-bold text-amber-300 hover:bg-amber-900/50 hover:text-white transition-all hover:scale-105 shadow-sm"
+                    >
+                      <span>{patent.patentNumber} Google Patents</span>
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                )}
               </div>
             ))}
           </div>

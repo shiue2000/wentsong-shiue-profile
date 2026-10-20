@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Layers, ShieldCheck, Cpu, Sparkles, ExternalLink, CheckCircle, ArrowUpRight } from 'lucide-react';
 import { PROFILE_DATA, ProjectItem } from '../data/profileData';
 import { Language } from '../types';
+import fraudAnalyticsImg from '../assets/images/fraud_analytics_viz_1792465142844.jpg';
 
 interface ProjectsPortfolioProps {
   language: Language;
@@ -10,6 +11,7 @@ interface ProjectsPortfolioProps {
 export const ProjectsPortfolio: React.FC<ProjectsPortfolioProps> = ({ language }) => {
   const isEn = language === 'en';
   const [filter, setFilter] = useState<string>('all');
+  const [imgFailed, setImgFailed] = useState(false);
 
   const allProjects = PROFILE_DATA.projects as ProjectItem[];
   const filteredProjects: ProjectItem[] =
@@ -39,13 +41,73 @@ export const ProjectsPortfolio: React.FC<ProjectsPortfolioProps> = ({ language }
         {/* Feature Spotlight with Visual Asset */}
         <div className="mt-10 glass-panel rounded-2xl overflow-hidden border border-slate-800">
           <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
-            <div className="lg:col-span-5 aspect-[4/3] w-full overflow-hidden bg-slate-900">
-              <img
-                src="/src/assets/images/fraud_analytics_viz_1792465142844.jpg"
-                alt="Explainable AI SHAP and Financial Fraud Classification Decision Boundary"
-                referrerPolicy="no-referrer"
-                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-              />
+            <div className="lg:col-span-5 aspect-[4/3] w-full overflow-hidden bg-slate-900 relative flex items-center justify-center">
+              {!imgFailed ? (
+                <img
+                  src="/assets/images/fraud_analytics_viz_1792465142844.jpg"
+                  alt="Explainable AI SHAP and Financial Fraud Classification Decision Boundary"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (target.src !== fraudAnalyticsImg) {
+                      target.src = fraudAnalyticsImg;
+                    } else {
+                      setImgFailed(true);
+                    }
+                  }}
+                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              ) : (
+                /* High-tech interactive fallback decision boundary & SHAP plot */
+                <div className="relative h-full w-full bg-gradient-to-br from-[#060e22] via-[#091533] to-[#040817] p-5 flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-[11px] font-mono text-cyan-400">
+                    <span>XGBOOST // HYPERPLANE DECISION BOUNDARY</span>
+                    <span>AUC = 0.984</span>
+                  </div>
+
+                  <svg className="w-full h-36" viewBox="0 0 300 150" fill="none">
+                    {/* Grid lines */}
+                    <line x1="20" y1="20" x2="280" y2="20" stroke="rgba(56, 189, 248, 0.1)" />
+                    <line x1="20" y1="60" x2="280" y2="60" stroke="rgba(56, 189, 248, 0.1)" />
+                    <line x1="20" y1="100" x2="280" y2="100" stroke="rgba(56, 189, 248, 0.1)" />
+                    <line x1="20" y1="130" x2="280" y2="130" stroke="rgba(56, 189, 248, 0.3)" />
+
+                    {/* Decision Boundary Contour Path */}
+                    <path
+                      d="M 30,130 Q 100,120 150,70 T 270,30"
+                      stroke="rgba(6, 182, 212, 0.9)"
+                      strokeWidth="2.5"
+                      fill="none"
+                    />
+
+                    {/* Safe Class Cluster (Blue circles) */}
+                    <circle cx="50" cy="115" r="4" fill="#38bdf8" opacity="0.8" />
+                    <circle cx="80" cy="110" r="4" fill="#38bdf8" opacity="0.8" />
+                    <circle cx="70" cy="95" r="4" fill="#38bdf8" opacity="0.8" />
+                    <circle cx="110" cy="105" r="4" fill="#38bdf8" opacity="0.8" />
+                    <circle cx="130" cy="85" r="4" fill="#38bdf8" opacity="0.8" />
+                    <circle cx="160" cy="90" r="4" fill="#38bdf8" opacity="0.8" />
+                    <circle cx="200" cy="70" r="4" fill="#38bdf8" opacity="0.8" />
+
+                    {/* Fraud Outlier Cluster (Red/Amber diamonds) */}
+                    <circle cx="90" cy="40" r="5" fill="#f87171" />
+                    <circle cx="130" cy="30" r="5" fill="#f87171" />
+                    <circle cx="170" cy="35" r="5" fill="#f87171" />
+                    <circle cx="210" cy="25" r="5" fill="#f87171" />
+                    <circle cx="250" cy="20" r="5" fill="#f87171" />
+                  </svg>
+
+                  <div className="flex items-center justify-between text-[10px] font-mono text-slate-400">
+                    <span className="flex items-center gap-1.5 text-cyan-300">
+                      <span className="h-2 w-2 rounded-full bg-cyan-400" />
+                      Legitimate Class
+                    </span>
+                    <span className="flex items-center gap-1.5 text-red-400">
+                      <span className="h-2 w-2 rounded-full bg-red-400" />
+                      Fraud Class (Declined)
+                    </span>
+                  </div>
+                </div>
+              )}
             </div>
             <div className="lg:col-span-7 p-6 sm:p-8">
               <div className="flex items-center gap-2 text-xs font-mono text-cyan-400">
