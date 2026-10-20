@@ -1,5 +1,20 @@
 import React, { useState } from 'react';
-import { ArrowRight, Bot, Award, FileCode2, ExternalLink, Sparkles, Copy, Check, Terminal, Cpu } from 'lucide-react';
+import {
+  ArrowRight,
+  Bot,
+  Award,
+  FileCode2,
+  ExternalLink,
+  Sparkles,
+  Copy,
+  Check,
+  Terminal,
+  Cpu,
+  Linkedin,
+  Globe,
+  AppWindow,
+  Link2
+} from 'lucide-react';
 import { PROFILE_DATA } from '../data/profileData';
 import { Language } from '../types';
 import { TopologyVisualizer } from './TopologyVisualizer';
@@ -17,15 +32,27 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   const isEn = language === 'en';
   const [copiedPitch, setCopiedPitch] = useState(false);
+  const [copiedUrl, setCopiedUrl] = useState<string | null>(null);
   const [imgFailed, setImgFailed] = useState(false);
+
+  const handleCopySingleUrl = (url: string, key: string) => {
+    navigator.clipboard.writeText(url);
+    setCopiedUrl(key);
+    setTimeout(() => setCopiedUrl(null), 2000);
+  };
 
   const handleCopyPitch = () => {
     const pitchText = `WenTsong Shiue, PhD | Senior AI & ML Researcher | Former VP @ Bank of America
 • 20+ years of enterprise data modeling, machine learning & semiconductor depth (Bank of America VP, Uniqlinc, Alvaview, FreeScale Semiconductor).
-• Co-inventor of U.S. Patent 11,531,734 ("Determining Optimal Machine Learning Models") and Freescale DPTV semiconductor patent record.
+• Co-inventor of U.S. Patent 11,531,734 ("Determining Optimal Machine Learning Models") and Freescale DPTC semiconductor patent record.
 • Deep expertise in financial fraud analytics (8 banking channels), Explainable AI (SHAP/LIME), Model Risk Governance (MRM), and IC EDA Low-Power AI Chip Automation.
 • Ph.D. in EE & CS from Arizona State University (cache memory data power modeling incorporated into PSU SimplePower tool).
-Portfolio: https://githubio-production-30a7.up.railway.app/en/ | LinkedIn: https://www.linkedin.com/in/wentsong-shiue-69425852`;
+
+Official Links:
+LinkedIn: https://www.linkedin.com/in/wentsong-shiue-69425852/
+Chief Data Scientist: https://githubio-production-30a7.up.railway.app/en/
+This app: https://wentsong-shiue-profile-production.up.railway.app/
+Patent's link: https://patents.google.com/patent/US11531734B2/en`;
 
     navigator.clipboard.writeText(pitchText);
     setCopiedPitch(true);
@@ -163,6 +190,143 @@ Portfolio: https://githubio-production-30a7.up.railway.app/en/ | LinkedIn: https
                 <FileCode2 className="h-3.5 w-3.5 text-cyan-400" />
                 <span>GitHub Pages</span>
               </button>
+            </div>
+
+            {/* Embedded Verified Portals & Links Hub */}
+            <div className="mt-7 rounded-2xl border border-cyan-500/30 bg-slate-900/85 p-4 sm:p-5 backdrop-blur-md shadow-xl shadow-cyan-950/20">
+              <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-800/80">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-cyan-300">
+                    {isEn ? 'Core Embedded Portals & Links' : '核心官方連結與展示門戶'}
+                  </span>
+                </div>
+                <span className="text-[11px] font-mono text-slate-400">
+                  {isEn ? 'Direct Verified Destinations' : '官方認證直達連結'}
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {/* 1. LinkedIn */}
+                <div className="group flex items-center justify-between rounded-xl border border-blue-500/25 bg-blue-950/25 hover:bg-blue-900/35 hover:border-blue-400/60 p-2.5 transition-all">
+                  <a
+                    href="https://www.linkedin.com/in/wentsong-shiue-69425852/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2.5 min-w-0 flex-1"
+                  >
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-600/20 text-blue-400 border border-blue-500/30">
+                      <Linkedin className="h-4 w-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-xs font-bold text-white group-hover:text-cyan-300 transition-colors flex items-center gap-1.5">
+                        <span>LinkedIn</span>
+                        <ExternalLink className="h-3 w-3 text-slate-400 group-hover:text-cyan-300" />
+                      </div>
+                      <div className="text-[10px] font-mono text-slate-400 truncate">
+                        linkedin.com/in/wentsong-shiue-69425852/
+                      </div>
+                    </div>
+                  </a>
+                  <button
+                    onClick={() => handleCopySingleUrl('https://www.linkedin.com/in/wentsong-shiue-69425852/', 'linkedin')}
+                    className="shrink-0 p-1.5 text-slate-400 hover:text-cyan-300 transition-colors"
+                    title="Copy LinkedIn URL"
+                  >
+                    {copiedUrl === 'linkedin' ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
+                  </button>
+                </div>
+
+                {/* 2. Chief Data Scientist */}
+                <div className="group flex items-center justify-between rounded-xl border border-emerald-500/25 bg-emerald-950/25 hover:bg-emerald-900/35 hover:border-emerald-400/60 p-2.5 transition-all">
+                  <a
+                    href="https://githubio-production-30a7.up.railway.app/en/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2.5 min-w-0 flex-1"
+                  >
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-emerald-600/20 text-emerald-400 border border-emerald-500/30">
+                      <Globe className="h-4 w-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors flex items-center gap-1.5">
+                        <span>Chief Data Scientist</span>
+                        <ExternalLink className="h-3 w-3 text-slate-400 group-hover:text-emerald-300" />
+                      </div>
+                      <div className="text-[10px] font-mono text-slate-400 truncate">
+                        githubio-production-30a7.up.railway.app/en/
+                      </div>
+                    </div>
+                  </a>
+                  <button
+                    onClick={() => handleCopySingleUrl('https://githubio-production-30a7.up.railway.app/en/', 'chief')}
+                    className="shrink-0 p-1.5 text-slate-400 hover:text-emerald-300 transition-colors"
+                    title="Copy Chief Data Scientist URL"
+                  >
+                    {copiedUrl === 'chief' ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
+                  </button>
+                </div>
+
+                {/* 3. This app */}
+                <div className="group flex items-center justify-between rounded-xl border border-cyan-500/25 bg-cyan-950/25 hover:bg-cyan-900/35 hover:border-cyan-400/60 p-2.5 transition-all">
+                  <a
+                    href="https://wentsong-shiue-profile-production.up.railway.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2.5 min-w-0 flex-1"
+                  >
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-600/20 text-cyan-400 border border-cyan-500/30">
+                      <AppWindow className="h-4 w-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-xs font-bold text-white group-hover:text-cyan-300 transition-colors flex items-center gap-1.5">
+                        <span>This app</span>
+                        <ExternalLink className="h-3 w-3 text-slate-400 group-hover:text-cyan-300" />
+                      </div>
+                      <div className="text-[10px] font-mono text-slate-400 truncate">
+                        wentsong-shiue-profile-production.up.railway.app/
+                      </div>
+                    </div>
+                  </a>
+                  <button
+                    onClick={() => handleCopySingleUrl('https://wentsong-shiue-profile-production.up.railway.app/', 'thisapp')}
+                    className="shrink-0 p-1.5 text-slate-400 hover:text-cyan-300 transition-colors"
+                    title="Copy This App URL"
+                  >
+                    {copiedUrl === 'thisapp' ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
+                  </button>
+                </div>
+
+                {/* 4. Patent's link */}
+                <div className="group flex items-center justify-between rounded-xl border border-amber-500/25 bg-amber-950/25 hover:bg-amber-900/35 hover:border-amber-400/60 p-2.5 transition-all">
+                  <a
+                    href="https://patents.google.com/patent/US11531734B2/en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2.5 min-w-0 flex-1"
+                  >
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-600/20 text-amber-400 border border-amber-500/30">
+                      <Award className="h-4 w-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-xs font-bold text-white group-hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                        <span>Patent's link</span>
+                        <ExternalLink className="h-3 w-3 text-slate-400 group-hover:text-amber-300" />
+                      </div>
+                      <div className="text-[10px] font-mono text-slate-400 truncate">
+                        patents.google.com/patent/US11531734B2/en
+                      </div>
+                    </div>
+                  </a>
+                  <button
+                    onClick={() => handleCopySingleUrl('https://patents.google.com/patent/US11531734B2/en', 'patent')}
+                    className="shrink-0 p-1.5 text-slate-400 hover:text-amber-300 transition-colors"
+                    title="Copy Patent URL"
+                  >
+                    {copiedUrl === 'patent' ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 

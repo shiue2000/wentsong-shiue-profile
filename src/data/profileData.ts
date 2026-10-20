@@ -97,7 +97,55 @@ export const PROFILE_DATA = {
   subtitleZh: '金融防偽分析 · 可解釋 AI (XAI) · 模型風險治理 · IC EDA 低功耗晶片設計 · 美國專利發明人',
   location: 'Austin, Texas, USA',
   locationZh: '美國德州奧斯汀',
-  linkedinUrl: 'https://www.linkedin.com/in/wentsong-shiue-69425852',
+  linkedinUrl: 'https://www.linkedin.com/in/wentsong-shiue-69425852/',
+  chiefDataScientistUrl: 'https://githubio-production-30a7.up.railway.app/en/',
+  thisAppUrl: 'https://wentsong-shiue-profile-production.up.railway.app/',
+  patentOfficialUrl: 'https://patents.google.com/patent/US11531734B2/en',
+  
+  // The 4 Core Embedded Portals & Links
+  officialLinks: [
+    {
+      id: 'linkedin',
+      name: 'LinkedIn',
+      nameZh: 'LinkedIn 個人專頁',
+      url: 'https://www.linkedin.com/in/wentsong-shiue-69425852/',
+      description: 'Official LinkedIn profile, executive background & recommendations',
+      descriptionZh: '官方 LinkedIn 個人檔案、高階專業人脈與推薦',
+      badge: 'Executive Profile',
+      tag: 'Networking'
+    },
+    {
+      id: 'chief-data-scientist',
+      name: 'Chief Data Scientist',
+      nameZh: '首席資料科學家專屬站',
+      url: 'https://githubio-production-30a7.up.railway.app/en/',
+      description: 'Chief Data Scientist portfolio, executive experience & research hub',
+      descriptionZh: '首席資料科學家高階成果、經歷與研究全景專屬站',
+      badge: 'Executive Hub',
+      tag: 'Portfolio'
+    },
+    {
+      id: 'this-app',
+      name: 'This app',
+      nameZh: '本互動展示應用',
+      url: 'https://wentsong-shiue-profile-production.up.railway.app/',
+      description: 'Live interactive AI & IC EDA architecture profile application',
+      descriptionZh: '本站即時互動式 AI 與 IC EDA 晶片研究展示平台',
+      badge: 'Live Production',
+      tag: 'Web App'
+    },
+    {
+      id: 'patents-link',
+      name: "Patent's link",
+      nameZh: '美國專利官方連結',
+      url: 'https://patents.google.com/patent/US11531734B2/en',
+      description: 'USPTO granted patent US 11,531,734: Optimal Machine Learning Models',
+      descriptionZh: '美國專利局獲准專利 US 11,531,734：決定最佳機器學習模型',
+      badge: 'USPTO Patent',
+      tag: 'Intellectual Property'
+    }
+  ],
+
   linkedinFeaturedMediaUrl: 'https://www.linkedin.com/in/wentsong-shiue-69425852/overlay/1790006860226/single-media-viewer/?profileId=ACoAAAsSRtABQG5pp-gxsP44d0iDSgmVvobOgqU',
   githubUrl: 'https://github.com/shiue2000',
   targetRepoUrl: 'https://github.com/shiue2000/shiue2000.github.io',
@@ -264,16 +312,16 @@ export const PROFILE_DATA = {
       bulletPoints: [
         'Investigated and modeled the power consumption and memory bus bandwidth of the i.MX multimedia chipset architecture under intensive workload profiles.',
         'Analyzed system bus data bandwidth, video power dissipation, and memory power taking into consideration the impact of burst data accesses.',
-        'Developed an innovative modeling solution for Dynamic Process Temperature Compensation (DPTV) systems using pseudo-regression methods, resulting in a divisional patent filing.'
+        'Developed an innovative modeling solution for Dynamic Process Temperature Compensation (DPTC) systems using pseudo-regression methods, resulting in a divisional patent filing.'
       ],
       bulletPointsZh: [
         '深入探討並建模 i.MX 多媒體晶片組架構在密集工作負載下的功耗與記憶體匯流排頻寬表現。',
         '針對巨量資料連續存取之影響，精確分析系統匯流排數據頻寬、視訊功耗及動態記憶體功耗管理。',
-        '運用擬迴歸（Pseudo Regression）方法為動態製程溫度補償系統（DPTV）開發無表建模方案，取得部門級專利申請。'
+        '運用擬迴歸（Pseudo Regression）方法為動態製程溫度補償系統（DPTC）開發無表建模方案，取得部門級專利申請。'
       ],
       technologies: ['C/C++', 'System Data Modeling', 'i.MX Architecture', 'Pseudo Regression', 'Memory Power Modeling', 'Bandwidth Analysis'],
-      highlights: 'Patent filing on Dynamic Process Temperature Compensation (DPTV) table-less modeling solution.',
-      highlightsZh: '發明動態製程溫度補償（DPTV）擬迴歸無表建模專利解決方案。'
+      highlights: 'Patent filing on Dynamic Process Temperature Compensation (DPTC) table-less modeling solution.',
+      highlightsZh: '發明動態製程溫度補償（DPTC）擬迴歸無表建模專利解決方案。'
     }
   ],
 
@@ -294,14 +342,14 @@ export const PROFILE_DATA = {
     {
       id: 'freescale-patent',
       patentNumber: 'Freescale / Multimedia Division',
-      title: 'A Novel Table-less Modeling Solution for Dynamic Process Temperature Compensation (DPTV) System using Pseudo Regression Method',
-      titleZh: '運用擬迴歸法之動態製程溫度補償 (DPTV) 系統無表建模專利方案',
+      title: 'A Novel Table-less Modeling Solution for Dynamic Process Temperature Compensation (DPTC) System using Pseudo Regression Method',
+      titleZh: '運用擬迴歸法之動態製程溫度補償 (DPTC) 系統無表建模專利方案',
       grantedDate: 'Divisional Patent Record',
       assigneeOrEntity: 'FreeScale Semiconductor',
       inventors: ['WenTsong Shiue'],
       description: 'A mathematical modeling framework eliminating memory-heavy lookup tables in semiconductor thermal and process compensation systems through high-precision pseudo-regression curves.',
       descriptionZh: '透過高精度擬迴歸曲線取代半導體熱補償與製程補償系統中佔用龐大記憶體的查表法（Lookup Tables），大幅減少晶片記憶體消耗與延遲。',
-      tags: ['Semiconductor', 'Data Modeling', 'DPTV', 'Pseudo Regression', 'Embedded Systems']
+      tags: ['Semiconductor', 'Data Modeling', 'DPTC', 'Pseudo Regression', 'Embedded Systems']
     }
   ],
 
@@ -458,7 +506,7 @@ export const PROFILE_DATA = {
         { name: 'Memory Hierarchy & Data Movement', focus: 'Cache optimization, memory bandwidth, energy-aware scheduling' },
         { name: 'AI Accelerators (GPU / NPU / TPU)', focus: 'Compute vs memory bandwidth trade-offs, systolic arrays, tensor cores' },
         { name: 'Chiplet & 3D IC Architectures', focus: 'HBM / memory systems, heterogeneous packaging, 3D integration' },
-        { name: 'Low-Power AI Computing & Modeling', focus: 'Cycle-accurate power simulation (PSU SimplePower) & DPTV (Freescale)' }
+        { name: 'Low-Power AI Computing & Modeling', focus: 'Cycle-accurate power simulation (PSU SimplePower) & DPTC (Freescale)' }
       ]
     }
   ],
@@ -713,8 +761,8 @@ export const PROFILE_DATA = {
       question: "What is Dr. Shiue's expertise in IC EDA, Low-Power Design, and AI Chip Automation?",
       questionZh: "薛博士在 IC EDA、低功耗晶片設計與 AI 晶片自動化方面有哪些專業背景與洞見？",
       tag: "IC EDA & AI Chips",
-      answer: "Dr. Shiue holds a Ph.D. in Electrical & Computer Engineering from Arizona State University, where his dissertation on cache memory data power modeling was officially adopted by Penn State University's SimplePower cycle-accurate simulator. He previously served as Senior Data Modeling Engineer at FreeScale Semiconductor working on i.MX chipset bus bandwidth, video power, and dynamic process temperature compensation (DPTV). Today, he pioneers the convergence of AI/ML + Knowledge Graphs + LLMs + AI Agents + EDA + Low-Power Chip Design, envisioning AI-native chip design and agentic EDA automating RTL generation, verification, placement, and tape-out for next-generation accelerators, chiplets, and 3D ICs.",
-      answerZh: "薛博士擁有亞利桑那州立大學（ASU）電機與電腦工程博士學位，其博士論文快取記憶體功耗建模成果被賓州州立大學 SimplePower 週期精確工具正式採用；他曾任飛思卡爾半導體（FreeScale）資深資料建模工程師，深入 i.MX 晶片組頻寬與 DPTV 動態溫度補償專利技術。如今，他積極探索 AI/ML + 知識圖譜 + LLMs + AI 智慧體 + EDA + 低功耗晶片設計的戰略交集，提出從傳統 EDA 自動化邁向 AI 原生與 Agentic EDA 的 2026–2035 晶片架構演進藍圖。"
+      answer: "Dr. Shiue holds a Ph.D. in Electrical & Computer Engineering from Arizona State University, where his dissertation on cache memory data power modeling was officially adopted by Penn State University's SimplePower cycle-accurate simulator. He previously served as Senior Data Modeling Engineer at FreeScale Semiconductor working on i.MX chipset bus bandwidth, video power, and dynamic process temperature compensation (DPTC). Today, he pioneers the convergence of AI/ML + Knowledge Graphs + LLMs + AI Agents + EDA + Low-Power Chip Design, envisioning AI-native chip design and agentic EDA automating RTL generation, verification, placement, and tape-out for next-generation accelerators, chiplets, and 3D ICs.",
+      answerZh: "薛博士擁有亞利桑那州立大學（ASU）電機與電腦工程博士學位，其博士論文快取記憶體功耗建模成果被賓州州立大學 SimplePower 週期精確工具正式採用；他曾任飛思卡爾半導體（FreeScale）資深資料建模工程師，深入 i.MX 晶片組頻寬與 DPTC 動態溫度補償專利技術。如今，他積極探索 AI/ML + 知識圖譜 + LLMs + AI 智慧體 + EDA + 低功耗晶片設計的戰略交集，提出從傳統 EDA 自動化邁向 AI 原生與 Agentic EDA 的 2026–2035 晶片架構演進藍圖。"
     },
     {
       question: "What is Dr. Shiue's experience with XGBoost and LightGBM?",
@@ -748,8 +796,8 @@ export const PROFILE_DATA = {
       question: "How can I get in touch with Dr. Shiue for opportunities or consulting?",
       questionZh: "如何與薛博士取得聯繫或洽談合作機會？",
       tag: "Contact",
-      answer: "Dr. Shiue is based in Austin, Texas. You can reach out directly via his LinkedIn profile (https://www.linkedin.com/in/wentsong-shiue-69425852) or through the contact inquiry form on this website. Phone and email details are available upon request for formal interviews.",
-      answerZh: "薛博士目前定居於美國德州奧斯汀（Austin, Texas）。您可以透過其 LinkedIn 個人檔案（https://www.linkedin.com/in/wentsong-shiue-69425852）或本站的聯絡表單取得聯繫。正式面試及合作洽談可進一步提供詳細聯絡資訊。"
+      answer: "Dr. Shiue is based in Austin, Texas. You can reach out directly via his LinkedIn profile (https://www.linkedin.com/in/wentsong-shiue-69425852/) or through the contact inquiry form on this website. Phone and email details are available upon request for formal interviews.",
+      answerZh: "薛博士目前定居於美國德州奧斯汀（Austin, Texas）。您可以透過其 LinkedIn 個人檔案（https://www.linkedin.com/in/wentsong-shiue-69425852/）或本站的聯絡表單取得聯繫。正式面試及合作洽談可進一步提供詳細聯絡資訊。"
     }
   ]
 };

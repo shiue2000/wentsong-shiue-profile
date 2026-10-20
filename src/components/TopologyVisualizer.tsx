@@ -403,15 +403,8 @@ export const TopologyVisualizer: React.FC<TopologyVisualizerProps> = ({ language
         {activeTab === 'cinematic' && (
           <div className="relative h-full w-full">
             <img
-              src="/assets/images/ai_neural_graph_1792465141807.jpg"
+              src={aiNeuralGraphImg}
               alt="Dr. WenTsong Shiue AI Neural Network and Machine Learning Topology"
-              onError={(e) => {
-                // Fallback to imported asset if relative public path fails
-                const target = e.currentTarget;
-                if (target.src !== aiNeuralGraphImg) {
-                  target.src = aiNeuralGraphImg;
-                }
-              }}
               className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#080d1a] via-transparent to-transparent" />

@@ -44,16 +44,9 @@ export const ProjectsPortfolio: React.FC<ProjectsPortfolioProps> = ({ language }
             <div className="lg:col-span-5 aspect-[4/3] w-full overflow-hidden bg-slate-900 relative flex items-center justify-center">
               {!imgFailed ? (
                 <img
-                  src="/assets/images/fraud_analytics_viz_1792465142844.jpg"
+                  src={fraudAnalyticsImg}
                   alt="Explainable AI SHAP and Financial Fraud Classification Decision Boundary"
-                  onError={(e) => {
-                    const target = e.currentTarget;
-                    if (target.src !== fraudAnalyticsImg) {
-                      target.src = fraudAnalyticsImg;
-                    } else {
-                      setImgFailed(true);
-                    }
-                  }}
+                  onError={() => setImgFailed(true)}
                   className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               ) : (

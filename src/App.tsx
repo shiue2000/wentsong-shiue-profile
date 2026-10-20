@@ -27,6 +27,16 @@ export default function App() {
   const [isChatModalOpen, setIsChatModalOpen] = useState(false);
   const [isDeploymentGuideOpen, setIsDeploymentGuideOpen] = useState(false);
 
+  // Guarantee the page always loads at the top/front portion when opened
+  useEffect(() => {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    if (!window.location.hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+    }
+  }, []);
+
   // Sync theme class to document element
   useEffect(() => {
     const root = document.documentElement;

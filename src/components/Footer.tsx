@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, BookOpen, Github, Linkedin, GitBranch, ArrowUp } from 'lucide-react';
+import { Award, BookOpen, Github, Linkedin, GitBranch, ArrowUp, Globe, AppWindow, ExternalLink } from 'lucide-react';
 import { PROFILE_DATA } from '../data/profileData';
 import { Language } from '../types';
 
@@ -22,6 +22,99 @@ export const Footer: React.FC<FooterProps> = ({
     <footer className="border-t border-slate-800/80 bg-[#060913] py-12 text-slate-400">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
+        {/* Core 4 Embedded Links Grid */}
+        <div className="mb-10 rounded-2xl border border-cyan-500/30 bg-slate-900/60 p-5 sm:p-6 backdrop-blur-md">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-800/80">
+            <div className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-cyan-300">
+                {isEn ? 'Core Embedded Portals & Official Links' : '核心官方連結與展示門戶'}
+              </span>
+            </div>
+            <span className="text-[11px] font-mono text-slate-400">
+              {isEn ? 'Embedded verified destinations' : '已嵌入之官方認證連結'}
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {/* 1. LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/wentsong-shiue-69425852/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col justify-between rounded-xl border border-blue-500/25 bg-blue-950/20 p-3 hover:border-blue-400 hover:bg-blue-900/30 transition-all"
+            >
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-bold text-white group-hover:text-cyan-300 transition-colors flex items-center gap-1.5">
+                  <Linkedin className="h-4 w-4 text-blue-400" />
+                  <span>LinkedIn</span>
+                </span>
+                <ExternalLink className="h-3 w-3 text-slate-400 group-hover:text-cyan-300" />
+              </div>
+              <span className="text-[11px] font-mono text-slate-400 truncate">
+                linkedin.com/in/wentsong-shiue-69425852/
+              </span>
+            </a>
+
+            {/* 2. Chief Data Scientist */}
+            <a
+              href="https://githubio-production-30a7.up.railway.app/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col justify-between rounded-xl border border-emerald-500/25 bg-emerald-950/20 p-3 hover:border-emerald-400 hover:bg-emerald-900/30 transition-all"
+            >
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors flex items-center gap-1.5">
+                  <Globe className="h-4 w-4 text-emerald-400" />
+                  <span>Chief Data Scientist</span>
+                </span>
+                <ExternalLink className="h-3 w-3 text-slate-400 group-hover:text-emerald-300" />
+              </div>
+              <span className="text-[11px] font-mono text-slate-400 truncate">
+                githubio-production-30a7.up.railway.app/en/
+              </span>
+            </a>
+
+            {/* 3. This app */}
+            <a
+              href="https://wentsong-shiue-profile-production.up.railway.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col justify-between rounded-xl border border-cyan-500/25 bg-cyan-950/20 p-3 hover:border-cyan-400 hover:bg-cyan-900/30 transition-all"
+            >
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-bold text-white group-hover:text-cyan-300 transition-colors flex items-center gap-1.5">
+                  <AppWindow className="h-4 w-4 text-cyan-400" />
+                  <span>This app</span>
+                </span>
+                <ExternalLink className="h-3 w-3 text-slate-400 group-hover:text-cyan-300" />
+              </div>
+              <span className="text-[11px] font-mono text-slate-400 truncate">
+                wentsong-shiue-profile-production.up.railway.app/
+              </span>
+            </a>
+
+            {/* 4. Patent's link */}
+            <a
+              href="https://patents.google.com/patent/US11531734B2/en"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col justify-between rounded-xl border border-amber-500/25 bg-amber-950/20 p-3 hover:border-amber-400 hover:bg-amber-900/30 transition-all"
+            >
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-bold text-white group-hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                  <Award className="h-4 w-4 text-amber-400" />
+                  <span>Patent's link</span>
+                </span>
+                <ExternalLink className="h-3 w-3 text-slate-400 group-hover:text-amber-300" />
+              </div>
+              <span className="text-[11px] font-mono text-slate-400 truncate">
+                patents.google.com/patent/US11531734B2/en
+              </span>
+            </a>
+          </div>
+        </div>
+
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           
           {/* Brand info */}
@@ -49,7 +142,7 @@ export const Footer: React.FC<FooterProps> = ({
           {/* External Profile & IP Links */}
           <div className="flex flex-wrap items-center gap-4 text-xs font-medium">
             <a
-              href={PROFILE_DATA.linkedinUrl}
+              href="https://www.linkedin.com/in/wentsong-shiue-69425852/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-slate-300 hover:text-cyan-400 transition-colors"
@@ -75,7 +168,7 @@ export const Footer: React.FC<FooterProps> = ({
               className="flex items-center gap-1.5 text-slate-300 hover:text-amber-400 transition-colors"
             >
               <Award className="h-4 w-4 text-amber-400" />
-              <span>US Patent 11,531,734</span>
+              <span>Patent's link (US 11,531,734)</span>
             </a>
 
             <a

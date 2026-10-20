@@ -217,7 +217,7 @@ export const IcedaSection: React.FC<IcedaSectionProps> = ({ language }) => {
               <span>ASU Ph.D. & Freescale IC Heritage</span>
             </div>
             <div className="text-slate-400">
-              Cycle-Accurate SimplePower (PSU) + DPTV Patent
+              Cycle-Accurate SimplePower (PSU) + DPTC Patent
             </div>
             <div className="text-[11px] text-emerald-400">
               ✓ AI + EDA + Memory + Low Power + Chiplets
@@ -384,7 +384,7 @@ export const IcedaSection: React.FC<IcedaSectionProps> = ({ language }) => {
                       {evolutionSteps[activeStep].shiueInsight}
                     </p>
                     <div className="pt-2 border-t border-blue-900/50 text-[11px] font-mono text-cyan-300">
-                      ASU Ph.D. Memory Modeling + Freescale DPTV System
+                      ASU Ph.D. Memory Modeling + Freescale DPTC System
                     </div>
                   </div>
 
@@ -488,7 +488,7 @@ export const IcedaSection: React.FC<IcedaSectionProps> = ({ language }) => {
                       : '藉由空間資料局部性、多階快取層級與頻寬優化，大幅降低每 Token 能耗（Joules per Token）。薛博士於亞利桑那州立大學之快取記憶體功耗建模博士研究（獲 PSU SimplePower 週期精確工具整合），正是此領域之核心基石。'}
                   </p>
                   <div className="p-3 rounded-lg bg-cyan-950/60 font-mono text-[11px] text-cyan-300 border border-cyan-800/60">
-                    Energy-Aware Scheduling + Dynamic DPTV Compensation = Optimal System Efficiency
+                    Energy-Aware Scheduling + Dynamic DPTC Compensation = Optimal System Efficiency
                   </div>
                 </div>
 

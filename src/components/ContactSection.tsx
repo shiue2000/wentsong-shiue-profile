@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Linkedin, Github, Send, CheckCircle2, MessageSquare } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Github, Send, CheckCircle2, MessageSquare, Globe, AppWindow, Award, ExternalLink, Copy, Check } from 'lucide-react';
 import { PROFILE_DATA } from '../data/profileData';
 import { Language } from '../types';
 
@@ -13,6 +13,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   onOpenAiChat,
 }) => {
   const isEn = language === 'en';
+  const [copiedKey, setCopiedKey] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,6 +21,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+
+  const handleCopy = (text: string, key: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedKey(key);
+    setTimeout(() => setCopiedKey(null), 2000);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -80,43 +87,118 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 </div>
               </div>
 
-              {/* LinkedIn */}
-              <div className="flex items-start gap-3 pt-4 border-t border-slate-800/80">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20">
-                  <Linkedin className="h-5 w-5" />
+              {/* Core Official Embedded Links */}
+              <div className="pt-4 border-t border-slate-800/80 space-y-3">
+                <div className="text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider">
+                  {isEn ? 'Core Embedded Links & Portals' : '核心官方連結與展示門戶'}
                 </div>
-                <div>
-                  <div className="text-xs font-mono text-slate-400">
-                    LinkedIn
-                  </div>
-                  <a
-                    href={PROFILE_DATA.linkedinUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-1 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors inline-block break-all"
-                  >
-                    linkedin.com/in/wentsong-shiue-69425852
-                  </a>
-                </div>
-              </div>
 
-              {/* GitHub */}
-              <div className="flex items-start gap-3 pt-4 border-t border-slate-800/80">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-800 text-slate-300 border border-slate-700">
-                  <Github className="h-5 w-5" />
-                </div>
-                <div>
-                  <div className="text-xs font-mono text-slate-400">
-                    GitHub Profile & Repository
+                {/* 1. LinkedIn */}
+                <div className="flex items-center justify-between p-2.5 rounded-xl border border-blue-500/20 bg-blue-950/20">
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-600/20 text-blue-400 border border-blue-500/30">
+                      <Linkedin className="h-4 w-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-xs font-bold text-white">LinkedIn</div>
+                      <a
+                        href="https://www.linkedin.com/in/wentsong-shiue-69425852/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[11px] font-mono text-cyan-400 hover:underline truncate block"
+                      >
+                        linkedin.com/in/wentsong-shiue-69425852/
+                      </a>
+                    </div>
                   </div>
-                  <a
-                    href={PROFILE_DATA.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-1 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors inline-block"
+                  <button
+                    onClick={() => handleCopy('https://www.linkedin.com/in/wentsong-shiue-69425852/', 'c-linkedin')}
+                    className="p-1.5 text-slate-400 hover:text-cyan-300"
+                    title="Copy LinkedIn URL"
                   >
-                    github.com/shiue2000
-                  </a>
+                    {copiedKey === 'c-linkedin' ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
+                  </button>
+                </div>
+
+                {/* 2. Chief Data Scientist */}
+                <div className="flex items-center justify-between p-2.5 rounded-xl border border-emerald-500/20 bg-emerald-950/20">
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-emerald-600/20 text-emerald-400 border border-emerald-500/30">
+                      <Globe className="h-4 w-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-xs font-bold text-white">Chief Data Scientist</div>
+                      <a
+                        href="https://githubio-production-30a7.up.railway.app/en/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[11px] font-mono text-emerald-400 hover:underline truncate block"
+                      >
+                        githubio-production-30a7.up.railway.app/en/
+                      </a>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => handleCopy('https://githubio-production-30a7.up.railway.app/en/', 'c-chief')}
+                    className="p-1.5 text-slate-400 hover:text-emerald-300"
+                    title="Copy Chief Data Scientist URL"
+                  >
+                    {copiedKey === 'c-chief' ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
+                  </button>
+                </div>
+
+                {/* 3. This app */}
+                <div className="flex items-center justify-between p-2.5 rounded-xl border border-cyan-500/20 bg-cyan-950/20">
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-600/20 text-cyan-400 border border-cyan-500/30">
+                      <AppWindow className="h-4 w-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-xs font-bold text-white">This app</div>
+                      <a
+                        href="https://wentsong-shiue-profile-production.up.railway.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[11px] font-mono text-cyan-300 hover:underline truncate block"
+                      >
+                        wentsong-shiue-profile-production.up.railway.app/
+                      </a>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => handleCopy('https://wentsong-shiue-profile-production.up.railway.app/', 'c-thisapp')}
+                    className="p-1.5 text-slate-400 hover:text-cyan-300"
+                    title="Copy This App URL"
+                  >
+                    {copiedKey === 'c-thisapp' ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
+                  </button>
+                </div>
+
+                {/* 4. Patent's link */}
+                <div className="flex items-center justify-between p-2.5 rounded-xl border border-amber-500/20 bg-amber-950/20">
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-600/20 text-amber-400 border border-amber-500/30">
+                      <Award className="h-4 w-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-xs font-bold text-white">Patent's link</div>
+                      <a
+                        href="https://patents.google.com/patent/US11531734B2/en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[11px] font-mono text-amber-300 hover:underline truncate block"
+                      >
+                        patents.google.com/patent/US11531734B2/en
+                      </a>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => handleCopy('https://patents.google.com/patent/US11531734B2/en', 'c-patent')}
+                    className="p-1.5 text-slate-400 hover:text-amber-300"
+                    title="Copy Patent URL"
+                  >
+                    {copiedKey === 'c-patent' ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
+                  </button>
                 </div>
               </div>
 

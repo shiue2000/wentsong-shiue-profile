@@ -49,12 +49,26 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
         '他在可解釋 AI（SHAP/LIME）與模型風險治理上的成就？',
       ];
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const messagesContainerRef = useRef<HTMLDivElement | null>(null);
+  const isInitialMount = useRef(true);
+
+  const scrollToBottom = (smooth = false) => {
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTo({
+        top: messagesContainerRef.current.scrollHeight,
+        behavior: smooth ? 'smooth' : 'auto',
+      });
+    }
   };
 
   useEffect(() => {
-    scrollToBottom();
+    // Only scroll within the chat box if the user has interacted / new messages arrive
+    // Never scroll on initial mount so the page stays at the front/top when opened
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+    scrollToBottom(true);
   }, [messages, isLoading]);
 
   const handleSendMessage = async (textToSend?: string) => {
@@ -198,7 +212,7 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({
       </div>
 
       {/* Messages Scroll Area */}
-      <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4">
+      <div ref={messagesContainerRef} className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4">
         {messages.map((msg) => {
           const isUser = msg.role === 'user';
 
